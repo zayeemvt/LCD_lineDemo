@@ -30,16 +30,19 @@ int main(void)
     Graphics_Context g_sContext; // Create context
     initializeGraphics(&g_sContext);
 
+    // Draw horizontal line
     Graphics_setForegroundColor(&g_sContext, GRAPHICS_COLOR_RED);
     Graphics_drawString(&g_sContext, (int8_t*) "Horizontal", -1, 15, 10, true);
     Graphics_drawString(&g_sContext, (int8_t*) "Line", -1, 27, 20, true);
     Graphics_drawLineH(&g_sContext, 80, 110, 20);
 
+    // Draw vertical line
     Graphics_setForegroundColor(&g_sContext, GRAPHICS_COLOR_BLUE);
     Graphics_drawString(&g_sContext, (int8_t*) "Vertical", -1, 15, 55, true);
     Graphics_drawString(&g_sContext, (int8_t*) "Line", -1, 25, 65, true);
     Graphics_drawLineV(&g_sContext, 95, 50, 80);
 
+    // Draw diagonal line
     Graphics_setForegroundColor(&g_sContext, GRAPHICS_COLOR_YELLOW);
     Graphics_drawString(&g_sContext, (int8_t*) "Diagonal", -1, 15, 90, true);
     Graphics_drawString(&g_sContext, (int8_t*) "Lines", -1, 22, 100, false);
